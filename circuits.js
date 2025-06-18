@@ -29,6 +29,7 @@ function drawLine(x, y, length, direction, opacity) {
     ctx.shadowBlur = 0;
 }
 
+
 function drawCircuits() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const lines = [];
@@ -55,3 +56,12 @@ function drawCircuits() {
 }
 
 drawCircuits();
+
+const form = document.getElementById("contact-form");
+const response = document.getElementById("form-response");
+
+form.addEventListener("submit", function(e){
+e.preventDefault();
+response.textContent = "Message sent!";
+response.style.opacity = 1;
+})
