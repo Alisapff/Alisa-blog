@@ -62,7 +62,6 @@ function drawCircuits() {
 drawCircuits();
 
 
-
 const form = document.getElementById("contact-form");
 const response = document.getElementById("form-response");
 
@@ -85,7 +84,7 @@ window.addEventListener("DOMContentLoaded", function(){
             }
         }).then(response => {
             if (response.ok){
-                alert("Thanks for your message!");
+                alert("Thanks!");
                 form.reset();
             } else{
                 alert("Something went wrong.");
