@@ -29,6 +29,10 @@ function drawLine(x, y, length, direction, opacity) {
     ctx.shadowBlur = 0;
 }
 
+function toggleAchievements(id){
+    const section = document.getElementById(id);
+    section.style.display = (section.style.display == "block") ? "none" : "block";
+}
 
 function drawCircuits() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -56,6 +60,8 @@ function drawCircuits() {
 }
 
 drawCircuits();
+
+
 
 const form = document.getElementById("contact-form");
 const response = document.getElementById("form-response");

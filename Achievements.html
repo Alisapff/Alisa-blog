@@ -5,6 +5,7 @@
   <title>Achievements</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
   <canvas id="circuitCanvas"></canvas>
@@ -14,21 +15,19 @@
         <a href="index.html" class="home-button">Home</a>
     </div>
 
-  <div class="main-container"> 
-    <div class="card">
-      <img src="images/linuxfund.png" alt="Linux">
-      <h2>Linux Fundamentals </h2>
+    <div class="main-container">
+      <div class="category" onclick="toggleAchievements('htb-list')">
+        HackTheBox Laboratory | Tier 0
+      </div>
+      <div class="achievements-list" id="htb-list">
+        <a href="#">Meow Box - Root Flag</a>
+        <a href="#">FTP Pwned</a>
+        <a href="#">SMB Flag</a>
+        <a href="#">Redeemer</a>
+      </div>
     </div>
 
-    <div class="card">
-      <img src="images/meowpwn.png" alt="Hack The Box">
-      <h2>Meow Root Flag </h2>
-    </div>
 
-    <div class="card">
-      <img src="images/ftppwn.png" alt="FtpPwn">
-      <h2>Ftp Flag</h2>
-    </div>
 
   </div>
   <footer class="footer">
