@@ -71,3 +71,25 @@ e.preventDefault();
 response.textContent = "Message sent!";
 response.style.opacity = 1;
 })
+window.addEventListener("DOMContentLoaded", function(){
+    const form = this.document.querySelector("form");
+    form.addEventListener("submit", function (e){
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = form.action;
+        fetch(action, {
+            method:"POST",
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok){
+                alert("Thanks for your message!");
+                form.reset();
+            } else{
+                alert("Something went wrong.");
+            }
+        })
+    })
+})

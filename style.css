@@ -1,15 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #2e003e, #6a0dad, #9d50bb);
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: 'Share Tech Mono', monospace;
-  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #2e003e, #6a0dad, #9d50bb);
   color: #ffbb00;
+  min-height: 100vh;
+  letter-spacing: 0.5px;
   background-color: #0e001d;
 }
 .main-container {
@@ -49,6 +44,7 @@ body {
 .card h2 {
   font-size: 1.4em;
 }
+
 .home-button {
     background-color: #ffffff22;
     color: white;
@@ -88,11 +84,6 @@ body {
         pointer-events: none;
     }
 
-    @keyframes blink{
-        0% {opacity: 1;}
-        50% {opacity: 0;}
-        100% {opacity: 1;}
-    }
     .footer{
         position: fixed;
         bottom: 0;
@@ -108,6 +99,7 @@ body {
         z-index: 10;
         box-shadow: 0 -2px 8px rgba(255, 105, 180, 0.3);
     }
+
     @media (max-width: 768px){
       body{
         flex-direction: column;
@@ -134,17 +126,20 @@ body {
         text-align: center;
       }
     }
+
 .contact-container{
-  max-width: 500px;
-  margin: 100px auto;
-  background: rgba(255,255,255,0.1);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 105, 100, 0.4);
-  text-align: center;
-  backdrop-filter:blur(10px);
-  color: #fff;
+width: 100%;
+max-width: 500px;
+background: rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(5px);
+padding: 40px;
+border-radius: 20px;
+box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+text-align: center;
+margin: 60px auto 100px;
+font-family: 'Share Tech Mono', monospace;
 }
+
 .contact-container h1{
   margin-bottom: 20px;
   font-size: 2em;
@@ -156,17 +151,20 @@ body {
   padding: 12px;
   margin: 10px 0;
   border: 2px solid #ffb6ff;
-  border-radius: 10px;
-  background-color: transparent;
-  color: white;
+   border-radius: 10px;
+   background-color: transparent;
+   color: white;
+  font-family: 'Share Tech Mono', monospace;
   outline: none;
-  transition: 0.3s
+  transition: 0.3s;
 }
+
 .contact-container input:focus,
-.contact-container textarea:focus{
+.contact-container textarea:focus {
   border-color: #ff66ff;
   box-shadow: 0 0 10px #ff66ff;
 }
+
 .contact-container button{
   padding: 10px 20px;
   background-color: #ff66ff;
@@ -177,16 +175,21 @@ body {
   font-weight: bold;
   transition: 0.3s;
 }
+
 .contact-container button:hover{
+  position: relative;
+  z-index: 10;
   background-color: #e754e7;
   box-shadow: 0 0 15px #ff66ff;
 }
+
 .form-response{
   margin-top: 15px;
   color: #ccffcc;
   opacity: 0;
   transition: opacity 0.5s ease-in;
 }
+
 .category {
   margin: 20px;
   padding: 15px;
@@ -198,14 +201,17 @@ body {
   width: fit-content;
   backdrop-filter: blur(4px);
 }
+
 .category:hover{
   background: rgba(255, 255, 255, 0.2);
 }
+
 .achievements-list{
   display: none;
   margin-top: 10px;
   padding-left: 30px;
 }
+
 .achievements-list a{
   display: block;
   color: #ffe6ff;
@@ -218,7 +224,33 @@ body {
   border-radius: 8px;
   width: fit-content;
 }
-.achievement-list a:hover{
+
+.achievements-list a:hover{
   text-decoration: underline;
   background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  .main-container{
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  .card{
+    width: 90%;
+    height: auto;
+  }
+  .card img{
+    height: auto;
+    max-height: 300px;
+  }
+  .blinking-text {
+    font-size: 1em;
+    padding: 10px;
+    text-align: center;
+  }
+  .contact-container{
+    margin: 40px 20px 100px;
+  }
 }
