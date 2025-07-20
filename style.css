@@ -220,12 +220,29 @@ font-family: 'Share Tech Mono', monospace;
     height: auto;
     max-height: 300px;
   }
-  .blinking-text {
-    font-size: 1em;
-    padding: 10px;
-    text-align: center;
-  }
   .contact-container{
     margin: 40px 20px 100px;
   }
+}
+#recent-projects {
+ position: absolute;
+ bottom: 2rem;
+ left: 2rem;
+ color: white;
+ padding: 5rem;
+ border-radius: 1rem;
+ font-family: 'Orbitron', sans-serif;
+ z-index: 999;
+}
+#recent-projects h2 {
+  margin-bottom: 1rem;
+  color: #ffccff;
+  font-size: 1.5rem;
+}
+#recent-projects a {
+  color: #ffb6ff
+}
+#recent-projects a:hover {
+  color: #ffe6ff;
+
 }
