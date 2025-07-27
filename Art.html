@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alisa | Digital Art Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="art-body">
+
+<canvas id="circuitCanvas"></canvas>
+<script src="circuits.js"></script>
+
+<header class="art-header">
+    <h1>Digital Art Gallery</h1>
+    <p>Exploring creativity through digital mediums and artistic expression</p>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="portrait">Portraits</button>
+        <button class="filter-btn" data-filter="character">Characters</button>
+        <button class="filter-btn" data-filter="concept">Concept Art</button>
+    </div>
+</header>
+
+<section class="artist-statement">
+    <div class="statement-content">
+        <h2>Artist's Statement</h2>
+        <p>In my spare time i like to do digital art, it keeps me creative and calm. I first started doing it in 2017.
+            If you are interested, I can do one for you, also. Feel free to contact me.
+        </p>
+    </div>
+</section>
+
+<section class="gallery-container">
+    <div class="gallery-item" data-category="portrait" data-aos="fade-up">
+        <div class="artwork-wrapper">
+            <img src="images/art1.jpg" alt="Digital portrait artwork titled Wiz" loading="lazy">
+            <div class="artwork-overlay">
+                <div class="artwork-info">
+                    <h3>Wiz</h3>
+                    <p>Digital Portrait • 2017</p>
+                    <div class="artwork-tags">
+                        <span class="tag">Portrait</span>
+                        <span class="tag">Character</span>
+                    </div>
+                </div>
+                <button class="view-btn" onclick="openPopup('images/art1.jpg', 'Wiz', 'A digital portrait showcasing contemporary character design with bold colors and clean lines. Created using digital painting techniques with focus on lighting and facial expression.', 'portrait')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    View
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-item" data-category="portrait" data-aos="fade-up" data-aos-delay="100">
+        <div class="artwork-wrapper">
+            <img src="images/art2.jpg" alt="Digital painting process artwork" loading="lazy">
+            <div class="artwork-overlay">
+                <div class="artwork-info">
+                    <h3>Process Study</h3>
+                    <p>Digital Painting • 2024</p>
+                    <div class="artwork-tags">
+                        <span class="tag">Portrait</span>
+                        <span class="tag">Study</span>
+                    </div>
+                </div>
+                <button class="view-btn" onclick="openPopup('images/art2.jpg', 'Process Study', 'A detailed study exploring the digital painting process from initial sketch to final render. This piece demonstrates various brush techniques and color blending methods.', 'portrait')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    View
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-item" data-category="character" data-aos="fade-up" data-aos-delay="200">
+        <div class="artwork-wrapper">
+            <img src="images/art3.jpg" alt="Character design artwork" loading="lazy">
+            <div class="artwork-overlay">
+                <div class="artwork-info">
+                    <h3>Character Design</h3>
+                    <p>Digital Illustration • 2024</p>
+                    <div class="artwork-tags">
+                        <span class="tag">Character</span>
+                        <span class="tag">Design</span>
+                    </div>
+                </div>
+                <button class="view-btn" onclick="openPopup('images/art3.jpg', 'Character Design', 'An original character design exploring modern fashion and personality through digital art. Focus on expressive features and contemporary styling.', 'character')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    View
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-item" data-category="portrait" data-aos="fade-up" data-aos-delay="300">
+        <div class="artwork-wrapper">
+            <img src="images/art4.jpg" alt="Portrait illustration artwork" loading="lazy">
+            <div class="artwork-overlay">
+                <div class="artwork-info">
+                    <h3>Portrait Study</h3>
+                    <p>Digital Art • 2024</p>
+                    <div class="artwork-tags">
+                        <span class="tag">Portrait</span>
+                        <span class="tag">Illustration</span>
+                    </div>
+                </div>
+                <button class="view-btn" onclick="openPopup('images/art4.jpg', 'Portrait Study', 'A refined portrait study focusing on lighting, texture, and emotional expression. Demonstrates advanced digital painting techniques and color theory.', 'portrait')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    View
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-item" data-category="concept" data-aos="fade-up" data-aos-delay="400">
+        <div class="artwork-wrapper">
+            <img src="images/art5.jpg" alt="Concept art digital artwork" loading="lazy">
+            <div class="artwork-overlay">
+                <div class="artwork-info">
+                    <h3>Digital Inspiration</h3>
+                    <p>Concept Art • 2024</p>
+                    <div class="artwork-tags">
+                        <span class="tag">Concept</span>
+                        <span class="tag">Digital</span>
+                    </div>
+                </div>
+                <button class="view-btn" onclick="openPopup('images/art5.jpg', 'Digital Inspiration', 'A conceptual piece exploring the intersection of traditional and digital art forms. Represents the evolution of artistic expression in the digital age.', 'concept')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    View
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="popup" class="popup hidden">
+    <div class="popup-content">
+        <button id="closeBtn" aria-label="Close popup">&times;</button>
+        <div class="popup-navigation">
+            <button id="prevBtn" aria-label="Previous artwork">‹</button>
+            <button id="nextBtn" aria-label="Next artwork">›</button>
+        </div>
+        <div class="popup-image-container">
+            <img id="popup-img" src="" alt="Popup Image">
+        </div>
+        <div class="popup-info">
+            <h3 id="popup-title"></h3>
+            <p id="popup-desc"></p>
+            <div class="popup-actions">
+                <button class="action-btn" onclick="shareArtwork()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                        <polyline points="16,6 12,2 8,6"></polyline>
+                        <line x1="12" y1="2" x2="12" y2="15"></line>
+                    </svg>
+                    Share
+                </button>
+                <button class="action-btn" onclick="downloadArtwork()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7,10 12,15 17,10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="back-navigation">
+    <a href="index.html" class="back-button">← Back to Home</a>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2025 Copyright: Alisaxbabe | All rights reserved</p>
+</footer>
+
+<script src="art-gallery.js"></script>
+</body>
+</html>
+
